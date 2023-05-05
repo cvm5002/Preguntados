@@ -1,5 +1,6 @@
 package com.example.preguntados
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -18,6 +19,8 @@ class ListaPreguntas : AppCompatActivity() {
         binding = ActivityListaPreguntasBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.btAAdirPregunta.setOnClickListener{anadirPregunta()}
+
         initRecyclerView()
     }
 
@@ -35,4 +38,10 @@ class ListaPreguntas : AppCompatActivity() {
         binding.rvPreguntas.adapter = myAdapter
     }
 
+    fun anadirPregunta(){
+        intent = Intent(this, ActivityListaPreguntasBinding::class.java).apply {
+
+        }
+        startActivity(intent)
+    }
 }
