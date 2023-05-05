@@ -1,27 +1,18 @@
 package com.example.preguntados
 
-import android.net.Uri
 import android.view.View
-import android.widget.Button
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.squareup.picasso.Picasso
-import java.io.File
+import com.example.preguntados.entidades.Pregunta
 
+class PreguntasHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-class PreguntasHolder(view: View) : RecyclerView.ViewHolder(view) {
+    val pregunta_id = itemView.findViewById<TextView>(R.id.twId)
+    val pregunta_texto = itemView.findViewById<TextView>(R.id.twPregunta)
 
-    val textView = view.findViewById<TextView>(R.id.twPregunta)
-
-    fun render(
-        lista: ListaDataClass,
-
-    ) {
-
-        textView.text = lista.titulo
-        textView.text = lista.pregunta
-        textView.text = lista.respuesta
+    fun render(p: Pregunta) {
+        pregunta_id.text = p.id.toString()
+        pregunta_texto.text = p.texto
 
     }
 

@@ -6,33 +6,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/apk/res-auto">
 
-    <ImageView
-        android:id="@+id/imgPuntuacion"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        tools:background="@color/black"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        />
-
     <TextView
         android:id="@+id/twPregunta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imgPuntuacion"
-        app:layout_constraintLeft_toLeftOf="@id/imgPuntuacion"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
 
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/buttonBorrar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/design_default_color_error"
-        android:text="Borrar"
-        app:layout_constraintBottom_toBottomOf="@+id/imgPuntuacion"
-        app:layout_constraintRight_toRightOf="parent" />
+    <TextView
+        android:id="@+id/twId"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools2:layout_editor_absoluteY="0dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
