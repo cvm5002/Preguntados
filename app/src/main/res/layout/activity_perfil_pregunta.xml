@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PerfilPregunta">
+
+    <TextView
+        android:id="@+id/twRespuesta2"
+        android:layout_width="138dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="20dp"
+        android:text="respuesta2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/twRespuesta1" />
+
+    <TextView
+        android:id="@+id/twRespuesta3"
+        android:layout_width="138dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="20dp"
+        android:text="respuesta3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/twRespuesta2" />
+
+    <TextView
+        android:id="@+id/twRespuesta4"
+        android:layout_width="138dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="20dp"
+        android:text="respuesta4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/twRespuesta3" />
+
+    <TextView
+        android:id="@+id/twPregunta"
+        android:layout_width="182dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="56dp"
+        android:text="pregunta"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/twTitulo" />
+
+    <TextView
+        android:id="@+id/twTitulo"
+        android:layout_width="135dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="80dp"
+        android:text="Titulo"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/twRespuesta1"
+        android:layout_width="138dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="100dp"
+        android:text="respuesta1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/twPregunta" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
