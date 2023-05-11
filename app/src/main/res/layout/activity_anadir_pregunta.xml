@@ -20,7 +20,7 @@
         app:layout_constraintTop_toBottomOf="@+id/etRespuesta1" />
 
     <EditText
-        android:id="@+id/Respuesta3"
+        android:id="@+id/etRespuesta3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="45dp"
@@ -43,7 +43,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Respuesta3" />
+        app:layout_constraintTop_toBottomOf="@+id/etRespuesta3" />
 
     <EditText
         android:id="@+id/etPregunta"

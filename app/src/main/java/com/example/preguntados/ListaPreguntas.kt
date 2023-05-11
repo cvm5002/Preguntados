@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.preguntados.databinding.ActivityAnadirPreguntaBinding
 import com.example.preguntados.databinding.ActivityListaPreguntasBinding
 import com.example.preguntados.entidades.Pregunta
 
@@ -19,7 +20,7 @@ class ListaPreguntas : AppCompatActivity() {
         binding = ActivityListaPreguntasBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btAAdirPregunta.setOnClickListener{anadirPregunta()}
+        binding.btAnadirPregunta.setOnClickListener{anadirPregunta()}
 
         initRecyclerView()
     }
@@ -39,7 +40,7 @@ class ListaPreguntas : AppCompatActivity() {
     }
 
     fun anadirPregunta(){
-        intent = Intent(this, ActivityListaPreguntasBinding::class.java).apply {
+        intent = Intent(this, AnadirPregunta::class.java).apply {
 
         }
         startActivity(intent)

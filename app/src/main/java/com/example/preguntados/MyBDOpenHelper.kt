@@ -25,6 +25,7 @@ class MyBDOpenHelper(contex: Context, factory: SQLiteDatabase.CursorFactory?) :
         val RESPUESTA4 = "respuesta4"
     }
 
+
     //para recrear las base de datos es necesarios borrar los ficheros sobre /data/data/Preguntados.aplicacion/databases
     override fun onCreate(db: SQLiteDatabase?) {
 
@@ -67,12 +68,7 @@ class MyBDOpenHelper(contex: Context, factory: SQLiteDatabase.CursorFactory?) :
 
     }
 
-    fun Pregunta(
-        texto: String,
-        respuesta1: String,
-        respuesta2: String,
-        respuesta3: String,
-        respuesta4: String, ) {
+    fun insertarPregunta(texto: String, respuesta1: String, respuesta2: String, respuesta3: String, respuesta4: String) {
 
         val db = this.writableDatabase
 
@@ -88,6 +84,7 @@ class MyBDOpenHelper(contex: Context, factory: SQLiteDatabase.CursorFactory?) :
 
 
     }
+
 
     fun obtenerPregunta(): Cursor {
         val db = this.readableDatabase
