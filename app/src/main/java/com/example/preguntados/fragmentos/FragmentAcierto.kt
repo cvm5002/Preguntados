@@ -1,4 +1,4 @@
-package com.example.superheroapplication.fragmentos
+package com.example.preguntados.fragmentos
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
-import com.example.superheroapplication.R
+import com.example.preguntados.R
 
 
 class FragmentAcierto : Fragment() {

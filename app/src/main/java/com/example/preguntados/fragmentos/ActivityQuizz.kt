@@ -1,41 +1,44 @@
 package com.example.preguntados.fragmentos
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import com.example.preguntados.R
-import com.example.preguntados.databinding.ActivityAnadirPreguntaBinding.inflate
+import com.example.preguntados.databinding.ActivityQuizzBinding
 
-class FragmentActivity : AppCompatActivity() {
-    lateinit var binding:
+class ActivityQuizz : AppCompatActivity() {
+    lateinit var binding: ActivityQuizzBinding;
 
 
     private val marcadorViewModel: MarcadorViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityFragmentBinding.inflate(layoutInflater)
+        binding = ActivityQuizzBinding.inflate(layoutInflater)
 
         setContentView(binding.root)
 
-        binding.buttonFragmento1.setOnClickListener {
-            mostrarFragmentoAcierto()
+        binding.btEmpezar.setOnClickListener {
+            mostrarPregunta()
         }
-        binding.buttonFragmento2.setOnClickListener{
-            mostrarFragmentoFallo()
-        }
-
 
         val nameObserver = Observer<Int> { valor ->
             // Update the UI, in this case, a TextView.
-            binding.tvMarcador?.setText(valor.toString())
+            //binding.tvMarcador?.setText(valor.toString())
         }
         marcadorViewModel.getMarcador().observe(this, nameObserver)
     }
 
     /////////////////////////////////////////////////////
+    private fun mostrarPregunta(){
+        intent = Intent(this, FragmentPregunta::class.java).apply {
 
+        }
+        startActivity(intent)
+    }
+    /////////////////////////////////////////////////////
     private fun mostrarFragmentoAcierto (){
 
         //Se establece la transaccion de fragments, necesarios para añadir

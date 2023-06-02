@@ -1,4 +1,4 @@
-package com.example.superheroapplication.fragmentos
+package com.example.preguntados.fragmentos
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
