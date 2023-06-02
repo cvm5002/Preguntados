@@ -1,14 +1,11 @@
 package com.example.preguntados.fragmentos
 
-import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.example.preguntados.R
-import com.example.preguntados.databinding.ActivityMainBinding
-import com.example.preguntados.databinding.ActivityQuizzBinding
 import com.example.preguntados.databinding.FragmentPreguntaBinding
 
 
@@ -21,9 +18,9 @@ class FragmentPregunta : Fragment() {
 
         //Si la respuesta es igual a la correcta. Te manda a acierto sino es correcto a fallo.
         if (binding.cbRespuesta1.isChecked){
-            binding.btContinuar.setOnClickListener(mostrarAcierto())
+            binding.btContinuar.setOnClickListener{replaceFragmentAcierto()}
         }else{
-            binding.btContinuar.setOnClickListener(mostrarFallo())
+            binding.btContinuar.setOnClickListener{replaceFragmentFallo()}
         }
 
     }
@@ -33,17 +30,24 @@ class FragmentPregunta : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pregunta, container, false)
+        return inflater.inflate(com.example.preguntados.R.layout.fragment_pregunta, container, false)
     }
 
-    fun mostrarAcierto(){
-        intent = Intent(this, FragmentPregunta::class.java).apply{
+    fun replaceFragmentAcierto() {
+        val fragment = FragmentAcierto()
+        val fragmentTransaction = parentFragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.fragmentContainerView, fragment)
+        fragmentTransaction.addToBackStack(null)
 
-        }
-        startActivity(intent)
+        fragmentTransaction.commit()
     }
 
-    fun mostrarFallo(){
+    fun replaceFragmentFallo() {
+        val fragment = FragmentFallo()
+        val fragmentTransaction = parentFragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.fragmentContainerView, fragment)
+        fragmentTransaction.addToBackStack(null)
 
+        fragmentTransaction.commit()
     }
 }

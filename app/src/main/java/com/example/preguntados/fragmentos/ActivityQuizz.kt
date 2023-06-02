@@ -39,33 +39,5 @@ class ActivityQuizz : AppCompatActivity() {
         startActivity(intent)
     }
     /////////////////////////////////////////////////////
-    private fun mostrarFragmentoAcierto (){
 
-        //Se establece la transaccion de fragments, necesarios para añadir
-        //quitar o reemplazar gragments
-        val transaction= supportFragmentManager.beginTransaction()
-        //se instancia el fragment a mostrar
-        val fragmento1 = FragmentAcierto()
-        //Indicamos el elemneto del layout donde haremos el cambio
-        transaction.replace(R.id.fragmentContainerView,fragmento1)
-        //Se establece valor a null para inidcar que no se está interesado
-        //En volver a ese fragmento más tarde, en caso contrario,
-        //se indicaría el nombre del fragmento, por ejemplo gragment.TAG,
-        //aprovechando la variable creada en la clase
-        transaction.addToBackStack(null)
-        //se muestra el fragment
-        transaction.commit()
-    }
-
-    //////////////////////////////////////////////////////
-
-    private fun mostrarFragmentoFallo (){
-
-        val transaction= supportFragmentManager.beginTransaction()
-        val fragmento2 = FragmentFallo()
-
-        transaction.replace(R.id.fragmentContainerView,fragmentoFallo)
-        transaction.addToBackStack(null)
-        transaction.commit()
-    }
 }
